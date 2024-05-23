@@ -5,7 +5,7 @@ import GradientBorder from "@/app/components/GradientBorder/GradientBorder";
 export default function SectionOptionPart() {
   return (
     <GradientBorder>
-      <div className="min-w-[600px] 2xl:w-[600px] py-[20px] px-[30px] rounded-[15px] space-y-5 bg-black">
+      <div className="min-w-[500px] 2xl:w-[500px] py-[20px] px-[30px] rounded-[15px] space-y-5 bg-black">
         <div className="text-[40px]">Select Your Option</div>
         <BoostPart month={1} boost={0} apr={3} />
         <BoostPart month={3} boost={2} apr={6} />

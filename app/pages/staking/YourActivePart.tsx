@@ -9,7 +9,7 @@ export default function YourActivePart() {
   const [isDropped, setDropped] = useState(false);
   return (
     <GradientBorder>
-      <div className="min-w-[600px] 2xl:w-[600px] p-[20px] rounded-[15px] flex flex-col items-center font-['nasalization'] bg-black">
+      <div className="min-w-[500px] 2xl:w-[500px] p-[20px] rounded-[15px] flex flex-col items-center font-['nasalization'] bg-black">
         <div className="text-[25px]">Your Active Staked</div>
         <div className="mt-4 flex gap-x-2 text-[30px] text-third items-center leading-none">
           <div>122,367</div>

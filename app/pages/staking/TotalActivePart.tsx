@@ -4,7 +4,7 @@ import LogoIcon from "@/app/components/Icons/LogoIcon";
 export default function TotalActivePart() {
   return (
     <GradientBorder>
-      <div className="min-w-[600px] 2xl:w-[600px] p-[30px] rounded-[15px] flex flex-col items-center font-['nasalization'] bg-black">
+      <div className="min-w-[500px] 2xl:w-[500px] p-[30px] rounded-[15px] flex flex-col items-center font-['nasalization'] bg-black">
         <div className="text-[25px]">Total Active Staked</div>
         <div className="mt-4 flex gap-x-2 text-[30px] text-third items-center leading-none">
           <div>47,989,122</div>
