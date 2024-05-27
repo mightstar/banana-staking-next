@@ -20,6 +20,7 @@ const config: Config = {
         light_yellow: "#F0CC0E",
         btn_normal: "#2E2F3A",
         btn_hover: "#181D2D",
+        btn_active: "#F0CC0E",
         dialog: "#555555",
         slider_normal: "#C1C1C1",
         slider_active: "#F0CC0E",

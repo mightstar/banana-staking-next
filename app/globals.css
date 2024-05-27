@@ -110,3 +110,27 @@ html {
   src: local("BeautifulWorldNBP"),
     url("./assets/font/BeautifulWorldNBP.woff") format("woff");
 }
+
+.select-item {
+  background-color: #000;
+  border: solid 0.1px #F0CC0E;
+  @apply text-white;
+}
+
+.selected-item {
+  background-color: #F0CC0E;
+  border: solid 0.1px #F0CC0E;
+  @apply text-black;
+}
+
+.btn_type_1 {
+  @apply w-full rounded-[10px] h-[60px] flex items-center justify-center font-['beamweapon'] text-[25px] bg-btn_normal text-third cursor-pointer my-8;
+}
+
+.btn_type_1:hover {
+  @apply bg-btn_hover;
+}
+
+.btn_type_1:active {
+  @apply bg-btn_active text-black;
+}

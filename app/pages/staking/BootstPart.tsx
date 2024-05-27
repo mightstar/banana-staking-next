@@ -1,4 +1,6 @@
+"use client";
 import LogoIcon from "@/app/components/Icons/LogoIcon";
+import { useState } from "react";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 interface PropsType {
@@ -8,8 +10,14 @@ interface PropsType {
 }
 
 export default function BoostPart(props: PropsType) {
+  const [selected, setSelected] = useState(false);
   return (
-    <div className="bg-light_yellow w-full space-y-1 rounded-[10px] p-[10px] text-black font-['helvetica']">
+    <div
+      className={`${
+        selected ? "selected-item" : "select-item"
+      } w-full space-y-1 rounded-[10px] p-[10px] font-['helvetica'] cursor-pointer`}
+      onClick={() => setSelected(!selected)}
+    >
       <div className="flex justify-between">
         <div className="text-[15px]">{props.month} month</div>
         <div className="rounded-full border border-black">
