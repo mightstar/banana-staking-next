@@ -7,16 +7,17 @@ interface PropsType {
   month: number;
   boost: number;
   apr: number;
+  selected?: boolean;
+  onClick?: () => void;
 }
 
 export default function BoostPart(props: PropsType) {
-  const [selected, setSelected] = useState(false);
   return (
     <div
       className={`${
-        selected ? "selected-item" : "select-item"
+        props?.selected ? "selected-item" : "select-item"
       } w-full space-y-1 rounded-[10px] p-[10px] font-['helvetica'] cursor-pointer`}
-      onClick={() => setSelected(!selected)}
+      onClick={() => props.onClick && props.onClick()}
     >
       <div className="flex justify-between">
         <div className="text-[15px]">{props.month} month</div>

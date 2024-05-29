@@ -27,3 +27,12 @@ export interface IPieData {
   color: string[];
   rate: number;
 }
+
+export interface IStakeOption {
+  totalReward: number;
+  apr: number;
+  timeRemain: number;
+  lockPeriod: number;
+  unlock: string;
+  boosted: number;
+}

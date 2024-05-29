@@ -100,7 +100,7 @@ html {
   font-style: normal;
   font-weight: normal;
   src: local("nasalization"),
-    url("./assets/font/nasalization.woff") format("woff");
+    url("./assets/font/nasalization-rg.otf") format("woff");
 }
 
 @font-face {
@@ -124,7 +124,7 @@ html {
 }
 
 .btn_type_1 {
-  @apply w-full rounded-[10px] h-[60px] flex items-center justify-center font-['beamweapon'] text-[25px] bg-btn_normal text-third cursor-pointer my-8;
+  @apply w-full rounded-[10px] h-[86px] flex items-center justify-center font-['beamweapon'] text-[25px] bg-btn_normal text-third cursor-pointer my-8;
 }
 
 .btn_type_1:hover {

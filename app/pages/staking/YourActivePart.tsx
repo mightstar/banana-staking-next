@@ -4,8 +4,13 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 import LogoIcon from "@/app/components/Icons/LogoIcon";
 import GradientBorder from "@/app/components/GradientBorder/GradientBorder";
+import { IStakeOption } from "@/app/types";
 
-export default function YourActivePart() {
+interface IProps {
+  data: IStakeOption;
+}
+
+export default function YourActivePart({data}: IProps) {
   const [isDropped, setDropped] = useState(false);
   return (
     <GradientBorder>
@@ -18,34 +23,34 @@ export default function YourActivePart() {
         </div>
         <div className="mt-8 w-full flex justify-between text-[18px]">
           <div className="text-white">Total BANA Rewards</div>
-          <div className="text-third">5,342 BANA</div>
+          <div className="text-third">{data.totalReward} BANA</div>
         </div>
         <div className="mt-4 w-full flex justify-between text-[18px]">
           <div className="text-white">APR</div>
-          <div className="text-third">10%</div>
+          <div className="text-third">{data.apr}%</div>
         </div>
         <div className="mt-4 w-full flex justify-between text-[18px]">
           <div className="text-white">Time Remaining</div>
-          <div className="text-third">22 Days</div>
+          <div className="text-third">{data.timeRemain} Days</div>
         </div>
         {isDropped && (
           <>
             <div className="mt-4 w-full flex justify-between text-[18px]">
               <div className="text-white">Locking Period</div>
-              <div className="text-third">6 Months</div>
+              <div className="text-third">{data.lockPeriod} Months</div>
             </div>
             <div className="mt-4 w-full flex justify-between text-[18px]">
               <div className="text-white">Reward Unlocks</div>
-              <div className="text-third">2024-08-15 16:25 UTC</div>
+              <div className="text-third">{data.unlock}</div>
             </div>
             <div className="mt-4 w-full flex justify-between text-[18px]">
               <div className="text-white">Boosted</div>
-              <div className="text-third">3.3x</div>
+              <div className="text-third">{data.boosted}x</div>
             </div>
             <div className="btn_type_1">
               WITHDRAW
             </div>
-            <div className="text-['Helvetica Neue'] text-[10px] text-secondary leading-none px-[10px] text-center">
+            <div className="text-['helvetica'] text-[10px] text-secondary leading-none px-[10px] text-center">
               BANA may be unstaked at any time, but if you unstake before your
               selected time period you will forfeit all your rewards.
             </div>
