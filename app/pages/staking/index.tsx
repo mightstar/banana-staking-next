@@ -4,8 +4,10 @@ import SelectOptionPart from "./SelectOptionPart";
 import TotalActivePart from "./TotalActivePart";
 import YourActivePart from "./YourActivePart";
 import GradientBorder from "@/app/components/GradientBorder/GradientBorder";
+import LogoPNG from "@/app/assets/image/Logo.png";
 import { useState } from "react";
 import { IStakeOption } from "@/app/types";
+import Image from "next/image";
 
 export default function StakingPage() {
   const [connected, setConnected] = useState(false);
@@ -18,12 +20,8 @@ export default function StakingPage() {
     <GradientBorder className="mx-[120px] my-[80px]">
       <div className="relative p-[20px] font-['Chronosfer'] max-2xl:items-center">
         <div className="absolute inset-0 opacity-[20%] z-[-1]"></div>
-        <div className="flex gap-x-8 items-end max-2xl:justify-center my-5">
-          <div className="rounded-full bg-gradient-to-r from-gray-500 to-white p-1">
-            <div className="h-full w-full items-center justify-center bg-primary rounded-full">
-              <LogoIcon size="80px" />
-            </div>
-          </div>
+        <div className="flex gap-x-8 items-start max-2xl:justify-center my-5">
+          <Image src={LogoPNG} className="w-[100px]" alt="logo" />
           <div className="text-[90px] leading-none bg-gradient-to-r from-gray-500 to-white inline-block text-transparent bg-clip-text">
             Staking Portal
           </div>

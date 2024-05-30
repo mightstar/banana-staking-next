@@ -22,6 +22,7 @@ export default function SectionOptionPart({
   const [percent, setPercent] = useState(0);
   const [value, setValue] = useState("0.0");
   const [select, setSelect] = useState(0);
+  const [selectOG, setSelectOG] = useState(false);
   return (
     <GradientBorder>
       <div className="min-w-[300px] 2xl:w-[500px] py-[20px] px-[30px] rounded-[15px] space-y-5 bg-black">
@@ -49,9 +50,9 @@ export default function SectionOptionPart({
         />
         <div
           className={`${
-            select === 4 ? "selected-item" : "select-item"
+            selectOG ? "selected-item" : "select-item"
           } w-full space-y-1 rounded-[10px] p-[10px] font-['helvetica'] cursor-pointer`}
-          onClick={() => setSelect(4)}
+          onClick={() => setSelectOG(!selectOG)}
         >
           <div className="flex justify-between">
             <div className="flex flex-col justify-between">
