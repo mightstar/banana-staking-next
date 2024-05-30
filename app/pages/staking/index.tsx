@@ -17,7 +17,7 @@ export default function StakingPage() {
     setStakes([...stakes, value]);
   };
   return (
-    <GradientBorder className="mx-[120px] my-[80px]">
+    <GradientBorder className="mx-[120px] my-[80px] max-2xl:m-[20px]">
       <div className="relative p-[20px] font-['Chronosfer'] max-2xl:items-center">
         <div className="absolute inset-0 opacity-[20%] z-[-1]"></div>
         <div className="flex gap-x-8 items-start max-2xl:justify-center my-5">
