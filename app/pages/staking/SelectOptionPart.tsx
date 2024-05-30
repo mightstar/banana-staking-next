@@ -1,9 +1,12 @@
 "use client";
 import LogoIcon from "@/app/components/Icons/LogoIcon";
+import OGIcon from "@/app/assets/image/OG.png";
 import BoostPart from "./BootstPart";
 import GradientBorder from "@/app/components/GradientBorder/GradientBorder";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { useState } from "react";
 import { IStakeOption } from "@/app/types";
+import Image from "next/image";
 
 interface IProps {
   connected: boolean;
@@ -44,6 +47,36 @@ export default function SectionOptionPart({
           selected={select === 3}
           onClick={() => setSelect(3)}
         />
+        <div
+          className={`${
+            select === 4 ? "selected-item" : "select-item"
+          } w-full space-y-1 rounded-[10px] p-[10px] font-['helvetica'] cursor-pointer`}
+          onClick={() => setSelect(4)}
+        >
+          <div className="flex justify-between">
+            <div className="flex flex-col justify-between">
+              <div className="text-[15px]">OG Pass NFT</div>
+              <div className="text-[20px]">+1% APR Boost</div>
+            </div>
+            <div>
+              <Image src={OGIcon} alt="og" height={55} />
+            </div>
+          </div>
+        </div>
+        <div
+          className={
+            "selected-item w-full space-y-1 rounded-[10px] p-[10px] font-['helvetica'] cursor-pointer"
+          }
+        >
+          <div className="flex justify-between">
+            <div className="flex flex-col justify-between text-[20px]">
+              Total:
+            </div>
+            <div className="flex flex-col justify-between text-[20px]">
+              11 % APR
+            </div>
+          </div>
+        </div>
         <div className="flex justify-between font-['nasalization'] text-[18px]">
           <div>BANA Value</div>
           <div className="font-['Chronosfer'] text-[30px] leading-none">

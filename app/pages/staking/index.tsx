@@ -56,7 +56,7 @@ export default function StakingPage() {
                 ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 justify-between p-10 gap-5 max-2xl:grid-cols-1 max-2xl:gap-y-20">
+          <div className="grid grid-cols-2 justify-between p-10 gap-x-20 gap-y-20 gap-y max-2xl:grid-cols-1 max-2xl:gap-y-20 ">
             {stakes.length > 1 &&
               stakes.map((stake, idx) => (
                 <YourActivePart key={idx} data={stake} />
